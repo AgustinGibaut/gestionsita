@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    color: rgb(65, 248, 65);
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(54, 112, 57);
+    padding: 20px 50px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(65, 248, 65);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+
+nav ul li a:hover {
+    animation: bounce 0.6s;
+}
+
+
+.explicacion {
+    background-color: rgb(54, 112, 57);
+    color: rgb(65, 248, 65);
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.explicacion h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.explicacion p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+.imagenes-destacadas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 20px;
+    background-color: rgb(54, 112, 57);
+    overflow: hidden;
+}
+
+.imagen.izquierda, .imagen.derecha {
+    position: relative;
+    width: 200px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.imagen.izquierda i, .imagen.derecha i {
+    font-size: 2.5rem;
+    color: rgb(65, 248, 65);
+    margin-bottom: 10px;
+}
+
+.imagen.central {
+    width: 400px;
+    text-align: center;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
